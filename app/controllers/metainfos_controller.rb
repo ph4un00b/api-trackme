@@ -1,0 +1,2 @@
+class MetainfosController < ApplicationController
+end
