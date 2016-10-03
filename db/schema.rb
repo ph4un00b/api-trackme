@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161001233501) do
 
   create_table "actions", force: :cascade do |t|
     t.string   "description"
-    t.string   "cycles"
+    t.integer  "cycles"
     t.string   "cycle_type"
     t.string   "feeling"
     t.string   "schedule"

@@ -24,10 +24,10 @@ default: &default
 development: &default
   adapter: postgresql
   encoding: unicode
+  min_messages: WARNING
   database: postgres
   pool: 5
   username: postgres
-  password:
   host: db
 
 

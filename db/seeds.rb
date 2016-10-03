@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Action.create(description: "issue#1", cycles: 3, cycle_type: "pomodoro", feeling: "010", schedule: "10000001000010001")
