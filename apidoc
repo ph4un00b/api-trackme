@@ -5,8 +5,10 @@ META - user                 - type    - name             - image
 ACTIONS - metaid - description  - cycles - cycle_type - feeling    - schedule         
 daf     - 22     - issue #1     - 3      - pomodoro   - 010        - 10000001000010001
 * http GET "http://192.168.99.100:3000/actions"
+
 * http POST "http://192.168.99.100:3000/actions" schedule=10000001000010001 feeling=100 cycle_type=pomodoro cycles:=3 description=foo
 * http POST "http://192.168.99.100:3000/actions" schedule=10000001000010001 feeling=100 cycle_type=pomodoro cycles=3 description=foo
+
 * http PUT "http://192.168.99.100:3000/actions/3" cycles:=1 description=foo-EDITED
 * http DELETE "http://192.168.99.100:3000/actions/2"
 * http GET "http://192.168.99.100:3000/actions/3"
