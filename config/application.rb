@@ -30,7 +30,7 @@ module Myapp
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
-        resource '/fakes', :headers => :any, :methods => [:get]
+        resource '/fakes', :headers => :any, :methods => [:get, :post]
         resource '/fakes/*', :headers => :any, :methods => [:put]
       end
     end

@@ -2,6 +2,7 @@ class FakesController < ApplicationController
     # GET /fakes
     def index
         fakes = Fake.all
+        sleep 3
         render json: fakes
     end
 
@@ -10,6 +11,18 @@ class FakesController < ApplicationController
         fake = Fake.find(params[:id])
         if fake.update(fake_params)
             render json: fake
+        else
+            render json: fake.errors, status: :unprocessable_entity
+        end
+    end
+
+    # POST /fakes
+    def create
+        fake = Fake.new(fake_params)
+
+        if fake.save
+            sleep 3
+            render json: fake, status: :created, location: fake
         else
             render json: fake.errors, status: :unprocessable_entity
         end
