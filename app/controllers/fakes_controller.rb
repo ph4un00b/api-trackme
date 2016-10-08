@@ -28,6 +28,12 @@ class FakesController < ApplicationController
         end
     end
 
+    # DELETE /fakes/1
+    def destroy
+        fake = Fake.find(params[:id])
+        fake.destroy
+    end
+
     private
         def fake_params
             params.permit(:name)

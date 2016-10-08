@@ -31,7 +31,7 @@ module Myapp
       allow do
         origins '*'
         resource '/fakes', :headers => :any, :methods => [:get, :post]
-        resource '/fakes/*', :headers => :any, :methods => [:put]
+        resource '/fakes/*', :headers => :any, :methods => [:put, :delete]
       end
     end
   end
