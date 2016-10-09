@@ -2,6 +2,7 @@ class FakesController < ApplicationController
     # GET /fakes
     def index
         fakes = Fake.all
+        # fakes = [{id:4, name: 'jamon'}]
         sleep 3
         render json: fakes
     end
