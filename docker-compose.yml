@@ -13,6 +13,8 @@ services:
     # username: postgres
     # host: db
   web:
+    tty: true # for rails/pry
+    stdin_open: true # for rails/pry
     build: "."
     ports:
       - "3000:3000"
