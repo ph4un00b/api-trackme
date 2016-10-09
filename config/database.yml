@@ -85,7 +85,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  url: <%= ENV['POSTGRESQL_URL'] %> #This is the environment variable created by our Dokku command earlier
+  encoding: unicode
+  pool: 5
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
