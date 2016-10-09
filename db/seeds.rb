@@ -20,3 +20,5 @@ Fake.create([
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
 ])
+
+User.create!(email:'jamon@jamon.com', password:'jamonjamon', password_confirmation:'jamonjamon')

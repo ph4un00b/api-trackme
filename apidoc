@@ -12,3 +12,7 @@ daf     - 22     - issue #1     - 3      - pomodoro   - 010        - 10000001000
 * http PUT "http://192.168.99.100:3000/actions/3" cycles:=1 description=foo-EDITED
 * http DELETE "http://192.168.99.100:3000/actions/2"
 * http GET "http://192.168.99.100:3000/actions/3"
+
+====
+* http POST "http://192.168.99.100:3000/auth_user" email=jamon@jamon.com password=jamonjamon
+* http GET "http://192.168.99.100:3000/fakes" Authorization:'Bearer TOKEN'

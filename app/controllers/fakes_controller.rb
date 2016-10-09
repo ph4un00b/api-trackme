@@ -1,10 +1,12 @@
 class FakesController < ApplicationController
+    before_action :authenticate_user!
     # GET /fakes
     def index
-        fakes = Fake.all
+        fakes = User.all
         # fakes = [{id:4, name: 'jamon'}]
         sleep 3
-        render json: fakes
+        # render json: fakes
+        render json: {'logged_in' => true}
     end
 
     # PATCH/PUT /fakes/1
